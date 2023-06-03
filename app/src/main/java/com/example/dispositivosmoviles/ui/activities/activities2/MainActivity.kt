@@ -1,34 +1,26 @@
-package com.example.dispositivosmoviles
+package com.example.dispositivosmoviles.ui.activities.activities2
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.graphics.blue
-import com.google.android.material.snackbar.Snackbar
+import com.example.dispositivosmoviles.R
 import com.example.dispositivosmoviles.databinding.ActivityMainBinding
-import com.example.dispositivosmoviles.databinding.ActivitySecond2Binding
-
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
-    //conviuerte al activity main en un objeto
-    private lateinit var binding: ActivityMainBinding
-    //conviuerte al activity main en un objeto
 
+    private lateinit var binding : ActivityMainBinding
+
+    //conviuerte al activity main en un objeto
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-    }
+        }
 
-
-
-    override fun onStart(){
+   override fun onStart(){
         super.onStart()
         init_Class()
     }
@@ -36,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun init_Class(){
         binding.button2.setOnClickListener{
             //txtBuscar.text = "el evento se ha ejecutado"
-            //binding.buscar.text ="el codigo esta correctamente"
+          //  binding.buscar.text ="el codigo esta correctamente"
 
             var f = Snackbar.make(
                 binding.button2,
@@ -45,9 +37,8 @@ class MainActivity : AppCompatActivity() {
             )
 
             var intent = Intent(
-                this, ActivitySecond2Binding::class.java
+                this,SecondActivity::class.java
             )
-
             intent.putExtra("var1", binding.buscar.text.toString())
 
             startActivity(intent)
@@ -55,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             f.setBackgroundTint(getColor(R.color.naranja)).show()
         }
     }
+
 
 
 }

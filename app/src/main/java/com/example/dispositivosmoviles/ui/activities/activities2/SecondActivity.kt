@@ -1,47 +1,54 @@
-package com.example.dispositivosmoviles
+package com.example.dispositivosmoviles.ui.activities.activities2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.dispositivosmoviles.R
+import com.example.dispositivosmoviles.databinding.ActivitySecondBinding
 import com.google.android.material.snackbar.Snackbar
-import com.example.dispositivosmoviles.databinding.ActivitySecond2Binding
 
-class SecondActivity2 : AppCompatActivity() {
-    private lateinit var binding : ActivitySecond2Binding
+class SecondActivity : AppCompatActivity() {
+
+
+    private lateinit var binding : ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySecond2Binding.inflate(layoutInflater)
+        binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Log.d("uce", "entrada Oncreate")
+        Log.d("uce", "entrando a Oncrate")
     }
 
     override fun onStart(){
         super.onStart()
+        //Log.d("uce", "entrando a Start")
         init_Class()
-        var name =""
+        var name= " ";
         intent.extras.let {
-            name = it?.getString("var1")!!
 
+            name =it?.getString("var1")!!
         }
-        binding.textView2S.text=" que mas ve " + name
+        binding.textView2S.text = "Que mas ve "+name
+
     }
 
     private fun init_Class(){
-        binding.button2S.setOnClickListener{
+        binding.button42S.setOnClickListener{
             //txtBuscar.text = "el evento se ha ejecutado"
-                binding.textView2S.text ="Correcto"
+            binding.textView2S.text ="el codigo esta correctamente"
 
             var f = Snackbar.make(
-                binding.button2S,
-                "otro mensaje",
+                binding.button42S,
+                "este es otro mensaje",
                 Snackbar.LENGTH_LONG
             )
             var intent = Intent(
                 this,MainActivity::class.java
             )
+
             startActivity(intent)
+
 
             f.setBackgroundTint(getColor(R.color.naranja)).show()
         }

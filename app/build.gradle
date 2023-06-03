@@ -4,8 +4,6 @@ plugins {
 }
 
 android {
-
-
     namespace 'com.example.dispositivosmoviles'
     compileSdk 33
 
@@ -35,7 +33,7 @@ android {
 
     buildFeatures{
         viewBinding=true
-
+        
     }
 
 
