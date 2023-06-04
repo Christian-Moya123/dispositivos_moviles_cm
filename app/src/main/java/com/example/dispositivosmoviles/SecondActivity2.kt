@@ -39,7 +39,7 @@ class SecondActivity2 : AppCompatActivity() {
                 Snackbar.LENGTH_LONG
             )
             var intent = Intent(
-                this,MainActivity::class.java
+                this,MainActivity2::class.java
             )
             startActivity(intent)
 

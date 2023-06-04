@@ -1,19 +1,14 @@
 package com.example.dispositivosmoviles
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.graphics.blue
 import com.google.android.material.snackbar.Snackbar
 import com.example.dispositivosmoviles.databinding.ActivityMainBinding
 import com.example.dispositivosmoviles.databinding.ActivitySecond2Binding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
     //conviuerte al activity main en un objeto
     private lateinit var binding: ActivityMainBinding
     //conviuerte al activity main en un objeto

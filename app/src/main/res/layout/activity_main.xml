@@ -22,13 +22,14 @@
         style="@style/bottonGeneral"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/texto1"
+        android:text="Ingresar"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="0.799" />
 
     <Button
 
@@ -40,10 +41,10 @@
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintVertical_bias="0.915" />
 
     <SearchView
         android:id="@+id/searchView"
@@ -51,7 +52,7 @@
         android:layout_width="211dp"
         android:layout_height="42dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         android:background="@color/caca"
         app:cornerRadius="40dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,6 +103,57 @@
         app:layout_constraintTop_toTopOf="@+id/button"
         app:layout_constraintVertical_bias="0.666"
         app:srcCompat="@drawable/fine_tuning_1" />
+
+    <TextView
+        android:id="@+id/textPasword"
+        android:layout_width="147dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="216dp"
+        android:text="TextView"
+        android:textColor="@color/blanco"
+
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.468"
+        tools:ignore="MissingConstraints,UnknownId"
+        tools:layout_editor_absoluteX="132dp" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="233dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="336dp"
+        android:background="@color/white"
+        android:contentDescription="Search"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/black"
+        android:textColorHint="@color/blanco"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="233dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:contentDescription="User name"
+        android:ems="10"
+        android:hint="User name"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/blanco"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_second)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Log.d("uce", "entrando a Oncrate")
@@ -23,21 +24,32 @@ class SecondActivity : AppCompatActivity() {
     override fun onStart(){
         super.onStart()
         //Log.d("uce", "entrando a Start")
-        init_Class()
+        //init_Class()
         var name= " ";
         intent.extras.let {
 
             name =it?.getString("var1")!!
         }
-        binding.textView2S.text = "Que mas ve "+name
+       // binding.textView2S.text = "Que mas ve "+name
+        Log.d("uce","Hola ${name}")
+        init_Class()
 
     }
 
     private fun init_Class(){
         binding.button42S.setOnClickListener{
             //txtBuscar.text = "el evento se ha ejecutado"
-            binding.textView2S.text ="el codigo esta correctamente"
+           // binding.textView2S.text ="el codigo esta correctamente"
 
+            var intent = Intent(
+                this, MainActivity::class.java
+            )
+
+            startActivity(intent)
+
+
+
+            /*
             var f = Snackbar.make(
                 binding.button42S,
                 "este es otro mensaje",
@@ -50,7 +62,7 @@ class SecondActivity : AppCompatActivity() {
             startActivity(intent)
 
 
-            f.setBackgroundTint(getColor(R.color.naranja)).show()
+            f.setBackgroundTint(getColor(R.color.naranja)).show()*/
         }
     }
 }
