@@ -25,13 +25,14 @@ class SecondActivity : AppCompatActivity() {
         super.onStart()
         //Log.d("uce", "entrando a Start")
         //init_Class()
-        var name= " ";
+        var name: String = " ";
         intent.extras.let {
 
             name =it?.getString("var1")!!
         }
        // binding.textView2S.text = "Que mas ve "+name
         Log.d("uce","Hola ${name}")
+        binding.textView2S.text = "Bienvenido " + name
         init_Class()
 
     }

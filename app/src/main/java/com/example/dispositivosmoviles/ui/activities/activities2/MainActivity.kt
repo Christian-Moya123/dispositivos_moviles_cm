@@ -36,10 +36,9 @@ class MainActivity : AppCompatActivity() {
 
             
             binding.button2.setOnClickListener{
-                val loginVal = LoginValidation()
-                val check = loginVal.checkLogin(
-                    binding.textPasword.text.toString(),
-                    binding.textView.text.toString()
+                val check = LoginValidation().checkLogin(
+                    binding.name.text.toString(),
+                    binding.pass.text.toString()
                 )
 
                 if(check){
@@ -47,15 +46,18 @@ class MainActivity : AppCompatActivity() {
                     var intent = Intent(
                         this,SecondActivity::class.java
                     )
-                    intent.putExtra("var1", binding.buscar.text.toString())
+                    intent.putExtra("var1", "")
 
                     intent.putExtra("var2", 2)
 
                     startActivity(intent)
+
+
+
+                }else{
                     Snackbar.make(
                         binding.textPasword,"Correcto",
-                    Snackbar.LENGTH_LONG).show()
-
+                        Snackbar.LENGTH_LONG).show()
                 }
             }
 
